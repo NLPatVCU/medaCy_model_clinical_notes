@@ -6,7 +6,8 @@ This repository contains a versioned, medaCy compatible Model for information ex
 
 ![alt text](https://nlp.cs.vcu.edu/images/Edit_NanomedicineDatabase.png "Nanoinformatics")
 
-#This section should contain all metadata about this version of the model.
+# This section should contain all metadata about this version of the model.
+Ideally this description will match the one provided in medaCy.
 
 
 
