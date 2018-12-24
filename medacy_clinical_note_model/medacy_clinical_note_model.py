@@ -8,7 +8,7 @@ def load():
     entities = ['Drug', 'Form', 'Route', 'ADE', 'Reason', 'Frequency', 'Duration', 'Dosage', 'Strength']
     pipeline = ClinicalPipeline(entities=entities)
     model = Model(pipeline, n_jobs=1)
-    model_directory = resource_filename('medacy', 'model')
+    model_directory = resource_filename('medacy_clinical_note_model', 'model')
     model.load(os.path.join(model_directory, 'n2c2_2018_no_metamap_2018_12_22_16.49.17.pkl'))
     return model
 
