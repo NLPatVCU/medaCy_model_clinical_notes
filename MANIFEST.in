@@ -1,1 +1,1 @@
-include medacy_clinical_note_model/model/*
+include medacy_model_clinical_notes/model/*
