@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
-from medacy_clinical_note_model import __version__, __authors__
+from medacy_model_clinical_notes import __version__, __authors__
 import sys
 
 packages = find_packages()
@@ -29,13 +29,13 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 setup(
-    name='medacy_clinical_note_model',
+    name='medacy_model_clinical_notes',
     version=__version__,
     license='GNU GENERAL PUBLIC LICENSE',
-    description='Medical Natural Language Processing (NLP) with spaCy',
+    description='medaCy compatable model for mining clinical notes.',
     long_description=readme(),
     packages=packages,
-    url='https://github.com/NanoNLP/medaCy_clinical_note_model',
+    url='https://github.com/NanoNLP/medaCy_model_clinical_notes',
     author=__authors__,
     author_email='contact@andriymulyar.com',
     keywords='natural-language-processing medical-natural-language-processing machine-learning nlp-library metamap clinical-text-processing',
