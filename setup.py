@@ -46,10 +46,7 @@ setup(
         'Natural Language :: English',
         'Topic :: Text Processing :: Linguistic',
         'Intended Audience :: Science/Research'
-    ],
-    install_requires=[
-        'medacy>=0.0.3',
-    ],
+    ]
     tests_require=["pytest"],
     cmdclass={"pytest": PyTest},
     include_package_data=True,
