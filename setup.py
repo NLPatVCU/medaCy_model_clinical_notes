@@ -46,7 +46,7 @@ setup(
         'Natural Language :: English',
         'Topic :: Text Processing :: Linguistic',
         'Intended Audience :: Science/Research'
-    ]
+    ],
     tests_require=["pytest"],
     cmdclass={"pytest": PyTest},
     include_package_data=True,
