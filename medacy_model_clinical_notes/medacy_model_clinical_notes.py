@@ -1,8 +1,7 @@
-from medacy.pipelines import ClinicalPipeline
-from medacy.model.model import Model
+from medacy.ner.pipelines import ClinicalPipeline
+from medacy.ner.model import Model
 from pkg_resources import resource_filename
 import os
-
 
 def load():
     entities = ['Drug', 'Form', 'Route', 'ADE', 'Reason', 'Frequency', 'Duration', 'Dosage', 'Strength']
