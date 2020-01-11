@@ -1,7 +1,8 @@
-from medacy.ner.pipelines import ClinicalPipeline
-from medacy.ner.model import Model
-from pkg_resources import resource_filename
 import os
+
+from medacy.ner.pipelines import ClinicalPipeline
+from medacy.model.model import Model
+from pkg_resources import resource_filename
 
 def load():
     entities = ['Drug', 'Form', 'Route', 'ADE', 'Reason', 'Frequency', 'Duration', 'Dosage', 'Strength']
@@ -10,3 +11,4 @@ def load():
     model_directory = resource_filename('medacy_model_clinical_notes', 'model')
     model.load(os.path.join(model_directory, 'n2c2_2018_no_metamap_2018_12_22_16.49.17.pkl'))
     return model
+
