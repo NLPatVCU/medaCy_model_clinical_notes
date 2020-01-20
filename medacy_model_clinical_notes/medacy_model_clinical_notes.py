@@ -1,6 +1,6 @@
 import os
 
-from medacy.ner.pipelines import ClinicalPipeline
+from medacy.pipelines import ClinicalPipeline
 from medacy.model.model import Model
 from pkg_resources import resource_filename
 
