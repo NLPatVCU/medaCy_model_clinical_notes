@@ -1,32 +1,33 @@
 CustomPipeline
 A custom pipeline configured from a JSON file
 
-Report created at Tue Jan 21 20:47:57 2020
+Report created at Wed Jan 22 09:09:18 2020
 
 MedaCy Version: 1.0.0
 SpaCy Version: 2.2.2
 SpaCy Model: core_web_sm, version 2.2.5
-Entities: ['Drug', 'Form', 'Dosage', 'Duration', 'Frequency', 'Reason', 'Strength', 'Route', 'ADE']
+Entities: ['Route', 'Reason', 'ADE', 'Form', 'Frequency', 'Duration', 'Drug', 'Dosage', 'Strength']
 Constructor arguments: {}
 
 Feature Extractor: FeatureExtractor at /home/farnsworthsw/projects/medaCy/medacy/pipeline_components/feature_extractors/discrete_feature_extractor.py
         Window Size: 3
-        SpaCy Features: ['text', 'pos_', 'suffix_']
+        SpaCy Features: ['text', 'pos_', 'suffix_', 'prefix_', 'shape_']
 Learner: CRF_l2sgd at /home/farnsworthsw/venvs/medaCy/lib64/python3.6/site-packages/sklearn_crfsuite/estimator.py
 Tokenizer: SystematicReviewTokenizer at /home/farnsworthsw/projects/medaCy/medacy/pipeline_components/tokenizers/systematic_review_tokenizer.py
 
-Pipeline configured from a JSON: {"learner": "CRF", "spacy_pipeline": "en_core_web_sm", "window_size": 3, "tokenizer": "systematic_review", "spacy_features": ["text", "pos_", "suffix_"]}
-JSON path: n2c2_pipeline.json
+Pipeline configured from a JSON: {"learner": "CRF", "spacy_pipeline": "en_core_web_sm", "window_size": 3, "tokenizer": "systematic_review", "spacy_features": ["text", "pos_", "suffix_", "prefix_", "shape_"]}
+JSON path: ./n2c2_pipeline.json
+
 
 | Entity (Count)   |   Precision |   Recall |    F1 |   F1_Min |   F1_Max |
 |------------------+-------------+----------+-------+----------+----------|
-| ADE (840)        |       0.405 |    0.156 | 0.22  |    0.164 |    0.274 |
-| Dosage (3744)    |       0.95  |    0.877 | 0.912 |    0.902 |    0.919 |
-| Drug (14311)     |       0.94  |    0.818 | 0.875 |    0.857 |    0.889 |
-| Duration (517)   |       0.854 |    0.699 | 0.768 |    0.726 |    0.816 |
-| Form (5883)      |       0.963 |    0.87  | 0.913 |    0.863 |    0.934 |
-| Frequency (5517) |       0.92  |    0.799 | 0.849 |    0.761 |    0.915 |
-| Reason (3299)    |       0.605 |    0.311 | 0.408 |    0.396 |    0.423 |
-| Route (4278)     |       0.964 |    0.909 | 0.935 |    0.924 |    0.948 |
-| Strength (5859)  |       0.936 |    0.92  | 0.927 |    0.896 |    0.938 |
-| system (44248)   |       0.906 |    0.805 | 0.847 |    0.825 |    0.871 |
+| ADE (840)        |       0.382 |    0.146 | 0.198 |    0.151 |    0.255 |
+| Dosage (3744)    |       0.931 |    0.895 | 0.912 |    0.903 |    0.919 |
+| Drug (14311)     |       0.929 |    0.832 | 0.878 |    0.864 |    0.887 |
+| Duration (517)   |       0.844 |    0.682 | 0.746 |    0.701 |    0.824 |
+| Form (5883)      |       0.927 |    0.92  | 0.922 |    0.892 |    0.936 |
+| Frequency (5517) |       0.912 |    0.853 | 0.873 |    0.733 |    0.918 |
+| Reason (3299)    |       0.576 |    0.328 | 0.406 |    0.384 |    0.432 |
+| Route (4278)     |       0.962 |    0.913 | 0.937 |    0.93  |    0.945 |
+| Strength (5859)  |       0.956 |    0.906 | 0.93  |    0.913 |    0.938 |
+| system (44248)   |       0.898 |    0.825 | 0.854 |    0.818 |    0.865 |
