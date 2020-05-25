@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
-from medacy_model_clinical_notes import __version__, __authors__
 import sys
 
 packages = find_packages()
@@ -30,13 +29,13 @@ class PyTest(TestCommand):
 
 setup(
     name='medacy_model_clinical_notes',
-    version=__version__,
+    version='1.0.1',
     license='GNU GENERAL PUBLIC LICENSE',
     description='medaCy compatable model for mining clinical notes.',
     long_description=readme(),
     packages=packages,
     url='https://github.com/NanoNLP/medaCy_model_clinical_notes',
-    author=__authors__,
+    author='Andriy Mulyar and Bridget McInnes',
     author_email='contact@andriymulyar.com',
     keywords='natural-language-processing medical-natural-language-processing machine-learning nlp-library metamap clinical-text-processing',
     classifiers=[
@@ -47,9 +46,10 @@ setup(
         'Topic :: Text Processing :: Linguistic',
         'Intended Audience :: Science/Research'
     ],
+    install_requires=['medacy @ https://github.com/NLPatVCU/medaCy/archive/v1.0.0.tar.gz'],
     tests_require=["pytest"],
     cmdclass={"pytest": PyTest},
     include_package_data=True,
     zip_safe=False
-
 )
+
